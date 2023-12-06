@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* UNIVERSAL *************************************************************************************************/
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+
+body {
+    background-color: #f5f9fc;
+    font-family: 'Arial', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333333;
+}
+
+a {
+    color: #8CBEB2;
+    text-decoration: none;
+}
+
+
+/* HOME ******************************************************************************************************/
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+
+.card {
+    background-color: white;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 4px 6px #00000011;
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+}
+
+.card-heading {
+    font-size: 1.5rem;
+    color: #2C3E50;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.home-input-field {
+    display: block;
+    border: 1px solid #E2E8F0;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.secondary-button {
+    color: #8CBEB2;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    text-decoration: underline;
+}
+
+
+/* DASHBOARD *************************************************************************************************/
+/*************************************************************************************************************/
+/*************************************************************************************************************/
+
+.shine-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    right: 100%;
+    bottom: 0;
+    background: #FFFFFF44;
+    transition: left 0.3s ease, right 0.25s ease;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+button:hover .shine-effect {
+    left: 100%;
+    right: -100%;
+}
