@@ -32,9 +32,3 @@ const BioSection: React.FC = () => {
 }
 
 export default BioSection;
-
-
-
-
-
-
