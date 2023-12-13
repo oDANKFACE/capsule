@@ -22,10 +22,10 @@ const BioSection: React.FC = () => {
                 {bioRef.current?.innerText || "Write about yourself! Interests, hobbies, celebrity crushes, it's all welcome!"}
             </div>
             <button
-                className="absolute top-3 right-5 bg-transparent text-2xl"
+                className="absolute top-3 right-5 bg-transparent text-2xl hover:text-[#7aa898] text-[#8CBEB2]"
                 onClick={toggleEditMode}
             >
-                {editMode ? '✅' : '✏️'}
+                {editMode ? '✓' : '✎️'}
             </button>
         </div>
     );

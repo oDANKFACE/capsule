@@ -1,5 +1,7 @@
 import React from 'react';
 import CreatePostButton from "@/components/dashboard/CreatePostButton";
+import TrendingPosts from "@/components/dashboard/TrendingPosts";
+import FriendsList from "@/components/dashboard/FriendsList";
 
 interface MainContentProps {
     activeTab: string;
@@ -7,10 +9,10 @@ interface MainContentProps {
 
 const MainContent: React.FC<MainContentProps> = ({activeTab}) => {
     return (
-        <div className={'flex align-center'}>
+        <div className="flex flex-col align-center">
             <CreatePostButton/>
-            {activeTab === 'friends' && <p>Content from Friends</p>}
-            {activeTab === 'trending' && <p>Trending Posts</p>}
+            {activeTab === 'friends' && <FriendsList/>}
+            {activeTab === 'trending' && <TrendingPosts/>}
             {activeTab === 'upcoming' && <p>Upcoming Events/Dates</p>}
             {activeTab === 'profile' && <p>User Profile</p>}
         </div>
