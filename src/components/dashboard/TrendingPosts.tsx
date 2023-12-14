@@ -3,7 +3,18 @@ import Post from './Post';
 import {get} from '@/app/utils/requests';
 
 const TrendingPosts: React.FC = () => {
-    const [trendingPosts, setTrendingPosts] = useState([]);
+    interface TrendingPost {
+        id: number;
+        username: string;
+        profile_pic_url: string;
+        post_image_url: string;
+        post_text: string;
+        buried_date: string;
+        uncover_date: string;
+        likes: number;
+    }
+
+    const [trendingPosts, setTrendingPosts] = useState<TrendingPost[]>([]);
 
     useEffect(() => {
         const fetchTrendingPosts = async () => {

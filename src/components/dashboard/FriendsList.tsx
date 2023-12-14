@@ -3,7 +3,16 @@ import FriendCard from './FriendCard';
 import {get} from '@/app/utils/requests';
 
 const FriendsList: React.FC = () => {
-    const [users, setUsers] = useState([]);
+
+    interface User {
+        id: number;
+        username: string;
+        profile_pic_url: string;
+        bio: string;
+    }
+
+    const [users, setUsers] = useState<User[]>([]);
+
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -20,7 +29,7 @@ const FriendsList: React.FC = () => {
     }, []);
 
     useEffect(() => {
-        console.log("Users state:", users); // Check the users state after setting
+        console.log("Users state:", users);
     }, [users]);
 
 

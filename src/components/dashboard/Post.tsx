@@ -18,7 +18,7 @@ const Post: React.FC<PostProps> = ({username, profilePic, postImage, postText, b
         router.push(`/profile/${username}`);
     };
 
-    const formatDate = (isoDate) => {
+    const formatDate = (isoDate: any) => {
         const date = new Date(isoDate);
         return date.toLocaleDateString(undefined, {year: 'numeric', month: 'long', day: 'numeric'});
     };
