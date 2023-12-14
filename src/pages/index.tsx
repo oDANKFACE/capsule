@@ -6,19 +6,19 @@ import {get} from '@/app/utils/requests';
 const Index: React.FC = () => {
     const [users, setUsers] = useState([]);
 
-    useEffect(() => {
-        async function getData() {
-            const data = await get('/api/users');
-            setUsers(data);
-        }
-        getData().catch(console.error);
-    }, []);
+    // useEffect(() => {
+    //     async function getData() {
+    //         const data = await get('/api/users');
+    //         setUsers(data);
+    //     }
+    //     getData().catch(console.error);
+    // }, []);
 
     return (
         <div>
             <HomePage/>
             {
-                users.map((u, index) => <div key={u.id || index}>{u.username}</div>)
+                // users.map(u => <div>{u.username}</div>)
             }
         </div>
     );

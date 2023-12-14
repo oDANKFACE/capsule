@@ -9,6 +9,7 @@ const FriendsList: React.FC = () => {
         const fetchUsers = async () => {
             try {
                 const response = await get('/api/users');
+                console.log("API response:", response);
                 setUsers(response || []);
             } catch (error) {
                 console.error('Error fetching users:', error);
@@ -17,6 +18,11 @@ const FriendsList: React.FC = () => {
 
         fetchUsers();
     }, []);
+
+    useEffect(() => {
+        console.log("Users state:", users); // Check the users state after setting
+    }, [users]);
+
 
     return (
         <div className="flex justify-center">
