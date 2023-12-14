@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Capsule
 
-## Getting Started
+## Description
 
-First, run the development server:
+Capsule is a social media platform that allows users to prepare posts in advance, "encapsulating" moments and thoughts to
+be revealed in the future. It's designed for users to experience the nostalgia of opening time capsules of their life.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Current Functionality
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Login Screen
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Basic login/registration screen (authentication not yet implemented).
+- Visitors can currently click login without username/password to enter the app.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Dashboard
 
-## Learn More
+Features the following navigation options:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Friends**
+    - Lists all of the user's friends (not fully implemented, currently just displays all users from the users table).
+    - Visually the friends are displayed on cards with their profile pic, username, and bio.
+2. **Trending**
+    - Shows the hottest new posts from popular users (not fully implemented, currently shows all posts with 100 or more likes from the posts table).
+    - Includes poster's profile picture, username, post image, text, "buried" date, and "uncovered" date.
+3. **Upcoming**
+    - Shows upcoming dates and events to encourage posting on.
+    - Generated based on interests the user selects for their profile.
+    - Currently under development.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Profile Page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Here the user can edit their bio and explore/add interests (interests needs implementation).
+- Option to upload a new profile picture (needs implementation).
 
-## Deploy on Vercel
+### Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Live version hosted on Vercel: [Capsule](https://capsule-livid.vercel.app/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Backend
+
+- Utilizes a PostgreSQL database hosted on Vercel.
+
+## Planned Development
+
+- **Authentication:** Implement secure login and user authentication.
+- **Posts:** Enable scheduled posting, media uploads, and engagement.
+- **Friends:** Functionality for users to add friends, view profiles, and engage with one another.
+- **Interests:** Option for users to list and edit personal interests.

@@ -1,5 +1,6 @@
 import React from 'react';
 import {useRouter} from 'next/router';
+// import moment LOOK AT ME, DO THIS LATER
 
 interface PostProps {
     username: string;
